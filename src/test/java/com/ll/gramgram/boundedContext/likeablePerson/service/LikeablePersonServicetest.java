@@ -34,6 +34,7 @@ public class LikeablePersonServicetest {
     @Autowired
     private InstaMemberRepository instaMemberRepository;
 
+    //서비스 구현
     @Test
     @DisplayName("삭제테스트")
     void tests1(){
