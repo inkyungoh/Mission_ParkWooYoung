@@ -52,12 +52,12 @@ public class LikeablePersonService {
 
     public LikeablePerson findId(Long id){
         Optional<LikeablePerson> li = this.likeablePersonRepository.findById(id);
-        if (li.isPresent());
-        LikeablePerson likeablePerson = li.get();
+        LikeablePerson likeablePerson =  li.get();
         return likeablePerson;
     }
 
 
+    @Transactional
     public void delete(LikeablePerson likeablePerson){
         this.likeablePersonRepository.delete(likeablePerson);
     }

@@ -37,11 +37,10 @@ public class LikeablePersonServicetest {
     @Test
     @DisplayName("삭제테스트")
     void tests1(){
-        Optional<LikeablePerson> li = this.likeablePersonRepository.findById(1L);
-        if (li.isPresent());
+        Optional<LikeablePerson> li = this.likeablePersonRepository.findById(5L);
         LikeablePerson likeablePerson = li.get();
         likeablePersonService.delete(likeablePerson);
-        //        assertThat(likeablePerson).isNotNull();
+        assertThat(likeablePerson).isNull();
 //        Assertions.assertTrue(likeablePerson.equals(null));
     }
 }
